@@ -4,6 +4,7 @@
 #import "NSObject+Utils.h"
 #import "TaskCell.h"
 #import "UITableViewCell+NIB.h"
+#import "StrokedView.h"
 
 @interface TasklistViewController ()
 
@@ -25,6 +26,12 @@
 -(void) viewDidLoad{
 	[super viewDidLoad];
 	
+	strokedView.color = [UIColor colorWithWhite:0.5 alpha:0.5];
+	strokedView.width = 4;
+	strokedView.pattern = [NSArray arrayWithObjects: 
+						   [NSNumber numberWithFloat: 7],
+						   [NSNumber numberWithFloat: 4],nil];
+	
 	self.navigationItem.title = @"Tasks";
 	self.navigationItem.rightBarButtonItem = [self editButtonItem];
 	
@@ -37,6 +44,7 @@
 }
 
 - (void) dealloc{
+	[strokedView release];
 	[tasks release];
 	[super dealloc];
 }
