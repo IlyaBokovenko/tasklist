@@ -4,6 +4,9 @@
 	Task* task;
 	IBOutlet UITextField* editField;
 	IBOutlet UILabel* memo;
+	
+	UIFont* normalFont;
+	UIFont* completedFont;
 }
 
 @property(retain) Task* task;

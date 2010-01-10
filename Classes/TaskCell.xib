@@ -33,7 +33,7 @@
 			</object>
 			<object class="IBUITableViewCell" id="455452733">
 				<reference key="NSNextResponder"/>
-				<int key="NSvFlags">-2147483356</int>
+				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<object class="IBUIView" id="194331782">
@@ -44,15 +44,15 @@
 							<object class="IBUILabel" id="1050434984">
 								<reference key="NSNextResponder" ref="194331782"/>
 								<int key="NSvFlags">290</int>
-								<string key="NSFrame">{{20, 10}, {280, 22}}</string>
+								<string key="NSFrame">{{20, 7}, {280, 30}}</string>
 								<reference key="NSSuperview" ref="194331782"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">Label</string>
-								<object class="NSFont" key="IBUIFont">
+								<object class="NSFont" key="IBUIFont" id="387244825">
 									<string key="NSName">Helvetica</string>
-									<double key="NSSize">1.800000e+01</double>
+									<double key="NSSize">2.400000e+01</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<object class="NSColor" key="IBUITextColor">
@@ -80,9 +80,12 @@
 										<int key="NSID">2</int>
 									</object>
 								</object>
+								<reference key="IBUIFont" ref="387244825"/>
 								<bool key="IBUIAdjustsFontSizeToFit">YES</bool>
 								<float key="IBUIMinimumFontSize">1.700000e+01</float>
-								<object class="IBUITextInputTraits" key="IBUITextInputTraits"/>
+								<object class="IBUITextInputTraits" key="IBUITextInputTraits">
+									<bool key="IBUIEnablesReturnKeyAutomatically">YES</bool>
+								</object>
 								<int key="IBUIClearButtonMode">1</int>
 							</object>
 						</object>
@@ -197,7 +200,7 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>UIResponder</string>
 					<string>TaskCell</string>
-					<string>{{122, 595}, {320, 44}}</string>
+					<string>{{172, 558}, {320, 44}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -223,7 +226,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">20</int>
+			<int key="maxID">24</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

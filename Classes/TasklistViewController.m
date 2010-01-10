@@ -23,6 +23,12 @@
 	[self.tableView reloadData];
 }
 
+#pragma mark UIViewController
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation{
+	return YES;
+}
+
 -(void) viewDidLoad{
 	[super viewDidLoad];
 	

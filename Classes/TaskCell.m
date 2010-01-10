@@ -1,10 +1,21 @@
 #import "TaskCell.h"
 #import "Task+Utils.h"
+#import "NSArray+Utils.h"
 
 @implementation TaskCell
 @synthesize task;
 
 #pragma mark private
+
+-(void)awakeFromNib{
+	[super awakeFromNib];
+	
+	normalFont = [memo.font retain];
+	NSArray* familyFonts = [UIFont fontNamesForFamilyName: memo.font.familyName];
+	NSString* obliqueFontName = [familyFonts detect: [NSPredicate predicateWithFormat:@"self endswith '-Oblique'"]];
+	if(!obliqueFontName)obliqueFontName = normalFont.fontName;
+	completedFont = [[UIFont fontWithName: obliqueFontName size:normalFont.pointSize] retain];	
+}
 
 
 -(void)hideEditField{
@@ -26,10 +37,10 @@
 
 - (void) showCompleted {
 	if([task.isCompleted boolValue]){		
-		memo.font = [UIFont italicSystemFontOfSize: 14]; 
+		memo.font = completedFont;
 		memo.textColor = [UIColor grayColor];
 	}else {
-		memo.font = [UIFont systemFontOfSize: 14];
+		memo.font = normalFont;
 		memo.textColor = [UIColor blackColor];
 	}
 }
@@ -74,6 +85,9 @@
 }
 
 - (void) dealloc{
+	[normalFont release];
+	[completedFont release];
+	
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 	[editField release];
 	[memo release];
