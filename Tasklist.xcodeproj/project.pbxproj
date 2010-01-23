@@ -15,6 +15,8 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* TasklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* TasklistViewController.m */; };
+		E628DC55110B004200AAC6EA /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = E628DC52110B004200AAC6EA /* TaskList.m */; };
+		E628DC56110B004200AAC6EA /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = E628DC54110B004200AAC6EA /* Task.m */; };
 		E62AE7F510ED46790003F8FE /* TasklistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E62AE7F410ED46790003F8FE /* TasklistViewController.xib */; };
 		E62AE88D10ED519E0003F8FE /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E62AE88B10ED519E0003F8FE /* TaskCell.m */; };
 		E62AE88E10ED519E0003F8FE /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E62AE88C10ED519E0003F8FE /* TaskCell.xib */; };
@@ -79,7 +81,6 @@
 		E660876B10ED2DEE005E71B4 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = E660872210ED2DEE005E71B4 /* XMLWriter.m */; };
 		E660876F10ED2E53005E71B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E660876E10ED2E53005E71B4 /* SystemConfiguration.framework */; };
 		E660878210ED2EF7005E71B4 /* tasklist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E660878110ED2EF7005E71B4 /* tasklist.xcdatamodeld */; };
-		E660878810ED2F58005E71B4 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = E660878710ED2F58005E71B4 /* Task.m */; };
 		E66087BA10ED312D005E71B4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66087B910ED312D005E71B4 /* CoreData.framework */; };
 		E66087C610ED318A005E71B4 /* Task+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E66087C510ED318A005E71B4 /* Task+Utils.m */; };
 		E67D922810ED802D00449727 /* Checklist.png in Resources */ = {isa = PBXBuildFile; fileRef = E67D922710ED802D00449727 /* Checklist.png */; };
@@ -100,10 +101,15 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Tasklist_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasklist_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Tasklist-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tasklist-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		E628DC51110B004200AAC6EA /* TaskList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskList.h; sourceTree = "<group>"; };
+		E628DC52110B004200AAC6EA /* TaskList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskList.m; sourceTree = "<group>"; };
+		E628DC53110B004200AAC6EA /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		E628DC54110B004200AAC6EA /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		E62AE7F410ED46790003F8FE /* TasklistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasklistViewController.xib; sourceTree = "<group>"; };
 		E62AE88A10ED519E0003F8FE /* TaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskCell.h; sourceTree = "<group>"; };
 		E62AE88B10ED519E0003F8FE /* TaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
 		E62AE88C10ED519E0003F8FE /* TaskCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TaskCell.xib; sourceTree = "<group>"; };
+		E656E64B10FA546B008E191A /* tasklist 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "tasklist 2.xcdatamodel"; sourceTree = "<group>"; };
 		E660868110ED2DEE005E71B4 /* Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Async.h; sourceTree = "<group>"; };
 		E660868210ED2DEE005E71B4 /* AsyncCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AsyncCallback.h; sourceTree = "<group>"; };
 		E660868310ED2DEE005E71B4 /* AsyncCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AsyncCallback.m; sourceTree = "<group>"; };
@@ -231,9 +237,6 @@
 		E660872210ED2DEE005E71B4 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
 		E660876E10ED2E53005E71B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E660877B10ED2EEB005E71B4 /* tasklist.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = tasklist.xcdatamodel; sourceTree = "<group>"; };
-		E660878310ED2EF7005E71B4 /* tasklist 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "tasklist 2.xcdatamodel"; sourceTree = "<group>"; };
-		E660878610ED2F58005E71B4 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		E660878710ED2F58005E71B4 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		E66087B910ED312D005E71B4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E66087C410ED318A005E71B4 /* Task+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+Utils.h"; sourceTree = "<group>"; };
 		E66087C510ED318A005E71B4 /* Task+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+Utils.m"; sourceTree = "<group>"; };
@@ -518,8 +521,10 @@
 		E660877510ED2E93005E71B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E660878610ED2F58005E71B4 /* Task.h */,
-				E660878710ED2F58005E71B4 /* Task.m */,
+				E628DC51110B004200AAC6EA /* TaskList.h */,
+				E628DC52110B004200AAC6EA /* TaskList.m */,
+				E628DC53110B004200AAC6EA /* Task.h */,
+				E628DC54110B004200AAC6EA /* Task.m */,
 				E66087C410ED318A005E71B4 /* Task+Utils.h */,
 				E66087C510ED318A005E71B4 /* Task+Utils.m */,
 			);
@@ -645,10 +650,11 @@
 				E660876A10ED2DEE005E71B4 /* WebParams.m in Sources */,
 				E660876B10ED2DEE005E71B4 /* XMLWriter.m in Sources */,
 				E660878210ED2EF7005E71B4 /* tasklist.xcdatamodeld in Sources */,
-				E660878810ED2F58005E71B4 /* Task.m in Sources */,
 				E66087C610ED318A005E71B4 /* Task+Utils.m in Sources */,
 				E62AE88D10ED519E0003F8FE /* TaskCell.m in Sources */,
 				09F9C8DF10F8D8040011632B /* StrokedView.m in Sources */,
+				E628DC55110B004200AAC6EA /* TaskList.m in Sources */,
+				E628DC56110B004200AAC6EA /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,9 +742,9 @@
 			isa = XCVersionGroup;
 			children = (
 				E660877B10ED2EEB005E71B4 /* tasklist.xcdatamodel */,
-				E660878310ED2EF7005E71B4 /* tasklist 2.xcdatamodel */,
+				E656E64B10FA546B008E191A /* tasklist 2.xcdatamodel */,
 			);
-			currentVersion = E660877B10ED2EEB005E71B4 /* tasklist.xcdatamodel */;
+			currentVersion = E656E64B10FA546B008E191A /* tasklist 2.xcdatamodel */;
 			path = tasklist.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -50,6 +50,9 @@ NSManagedObjectContext* managedObjectContext(){
 	
     NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"DB.sqlite"]];
 	
+	NSError* er = nil;
+	[[NSFileManager defaultManager] removeItemAtPath: [storeUrl absoluteString] error:&er];
+	
 	NSError *error = nil;
 	NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
 							 [NSNumber numberWithBool:YES], NSMigratePersistentStoresAutomaticallyOption,

@@ -3,7 +3,7 @@
 @interface TaskCell : UITableViewCell<UITextFieldDelegate> {
 	Task* task;
 	IBOutlet UITextField* editField;
-	IBOutlet UILabel* memo;
+	IBOutlet UILabel* taskTextLabel;
 	
 	UIFont* normalFont;
 	UIFont* completedFont;

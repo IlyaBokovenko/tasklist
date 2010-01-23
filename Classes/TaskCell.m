@@ -10,8 +10,8 @@
 -(void)awakeFromNib{
 	[super awakeFromNib];
 	
-	normalFont = [memo.font retain];
-	NSArray* familyFonts = [UIFont fontNamesForFamilyName: memo.font.familyName];
+	normalFont = [taskTextLabel.font retain];
+	NSArray* familyFonts = [UIFont fontNamesForFamilyName: taskTextLabel.font.familyName];
 	NSString* obliqueFontName = [familyFonts detect: [NSPredicate predicateWithFormat:@"self endswith '-Oblique'"]];
 	if(!obliqueFontName)obliqueFontName = normalFont.fontName;
 	completedFont = [[UIFont fontWithName: obliqueFontName size:normalFont.pointSize] retain];	
@@ -24,7 +24,7 @@
 
 -(void)showEditField{
 	editField.hidden = NO;
-	editField.text = task.memo;
+	editField.text = task.text;
 	[editField becomeFirstResponder];	
 	NSNotificationCenter *notifications = [NSNotificationCenter defaultCenter];
 	[notifications addObserver:self selector:@selector(kbdWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -37,21 +37,21 @@
 
 - (void) showCompleted {
 	if([task.isCompleted boolValue]){		
-		memo.font = completedFont;
-		memo.textColor = [UIColor grayColor];
+		taskTextLabel.font = completedFont;
+		taskTextLabel.textColor = [UIColor grayColor];
 	}else {
-		memo.font = normalFont;
-		memo.textColor = [UIColor blackColor];
+		taskTextLabel.font = normalFont;
+		taskTextLabel.textColor = [UIColor blackColor];
 	}
 }
 
 -(void)showTask{
-	memo.text = task.memo;
+	taskTextLabel.text = task.text;
 	[self showCompleted];
 }
 
 -(void)updateMemo{
-	task.memo = editField.text;
+	task.text = editField.text;
 	[self hideEditField];
 	[self showTask];	
 }
@@ -90,7 +90,7 @@
 	
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 	[editField release];
-	[memo release];
+	[taskTextLabel release];
 	[task release];
 	[super dealloc];
 }

@@ -8,7 +8,7 @@
 	NSEntityDescription *entity = [NSEntityDescription entityForName:@"Task" inManagedObjectContext: managedObjectContext()];
 	[request setEntity:entity];
 	
-	NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"memo" ascending:YES] autorelease];
+	NSSortDescriptor *sortDescriptor = [[[NSSortDescriptor alloc] initWithKey:@"text" ascending:YES] autorelease];
 	NSArray *sortDescriptors = [NSArray arrayWithObject: sortDescriptor];
 	[request setSortDescriptors:sortDescriptors];
 	
@@ -21,7 +21,7 @@
 +(id) taskWithMemo: (NSString*)memo{
 	Task* task = [NSEntityDescription insertNewObjectForEntityForName:@"Task" 
 								  inManagedObjectContext: managedObjectContext()];
-	task.memo = memo;
+	task.text = memo;
 	return task;
 }
 
