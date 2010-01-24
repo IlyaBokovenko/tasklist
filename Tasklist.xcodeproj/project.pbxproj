@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09644B76110B76710087C984 /* CustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 09644B74110B76710087C984 /* CustomNavigationController.m */; };
+		09644B77110B76710087C984 /* CustomNavigationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09644B75110B76710087C984 /* CustomNavigationController.xib */; };
+		09644C68110C5CBC0087C984 /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = 09644C63110C5CBC0087C984 /* TaskList.m */; };
+		09644C69110C5CBC0087C984 /* ListsCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 09644C65110C5CBC0087C984 /* ListsCollection.m */; };
+		09644C6A110C5CBC0087C984 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = 09644C67110C5CBC0087C984 /* Task.m */; };
+		09644C8D110C5CE20087C984 /* BWOrderedManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 09644C8C110C5CE20087C984 /* BWOrderedManagedObject.m */; };
+		09644CA7110C6A270087C984 /* CoreData_common.m in Sources */ = {isa = PBXBuildFile; fileRef = 09644CA6110C6A270087C984 /* CoreData_common.m */; };
+		09644CD1110C74410087C984 /* TasklistsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 09644CCF110C74410087C984 /* TasklistsManager.m */; };
+		09644CD2110C74410087C984 /* TasklistsManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09644CD0110C74410087C984 /* TasklistsManager.xib */; };
 		09F9C8DF10F8D8040011632B /* StrokedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 09F9C8DE10F8D8040011632B /* StrokedView.m */; };
+		09FAE8CB110C78F9002C7B56 /* TasklistCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FAE8CA110C78F9002C7B56 /* TasklistCell.m */; };
+		09FAE8CD110C7908002C7B56 /* TasklistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09FAE8CC110C7908002C7B56 /* TasklistCell.xib */; };
 		1D3623260D0F684500981E51 /* TasklistAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* TasklistAppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
@@ -15,8 +26,6 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28D7ACF80DDB3853001CB0EB /* TasklistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7ACF70DDB3853001CB0EB /* TasklistViewController.m */; };
-		E628DC55110B004200AAC6EA /* TaskList.m in Sources */ = {isa = PBXBuildFile; fileRef = E628DC52110B004200AAC6EA /* TaskList.m */; };
-		E628DC56110B004200AAC6EA /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = E628DC54110B004200AAC6EA /* Task.m */; };
 		E62AE7F510ED46790003F8FE /* TasklistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E62AE7F410ED46790003F8FE /* TasklistViewController.xib */; };
 		E62AE88D10ED519E0003F8FE /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E62AE88B10ED519E0003F8FE /* TaskCell.m */; };
 		E62AE88E10ED519E0003F8FE /* TaskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E62AE88C10ED519E0003F8FE /* TaskCell.xib */; };
@@ -82,16 +91,34 @@
 		E660876F10ED2E53005E71B4 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E660876E10ED2E53005E71B4 /* SystemConfiguration.framework */; };
 		E660878210ED2EF7005E71B4 /* tasklist.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E660878110ED2EF7005E71B4 /* tasklist.xcdatamodeld */; };
 		E66087BA10ED312D005E71B4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E66087B910ED312D005E71B4 /* CoreData.framework */; };
-		E66087C610ED318A005E71B4 /* Task+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E66087C510ED318A005E71B4 /* Task+Utils.m */; };
 		E67D922810ED802D00449727 /* Checklist.png in Resources */ = {isa = PBXBuildFile; fileRef = E67D922710ED802D00449727 /* Checklist.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09644B73110B76710087C984 /* CustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationController.h; sourceTree = "<group>"; };
+		09644B74110B76710087C984 /* CustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationController.m; sourceTree = "<group>"; };
+		09644B75110B76710087C984 /* CustomNavigationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomNavigationController.xib; sourceTree = "<group>"; };
+		09644C62110C5CBC0087C984 /* TaskList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskList.h; sourceTree = "<group>"; };
+		09644C63110C5CBC0087C984 /* TaskList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskList.m; sourceTree = "<group>"; };
+		09644C64110C5CBC0087C984 /* ListsCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListsCollection.h; sourceTree = "<group>"; };
+		09644C65110C5CBC0087C984 /* ListsCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsCollection.m; sourceTree = "<group>"; };
+		09644C66110C5CBC0087C984 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		09644C67110C5CBC0087C984 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		09644C8B110C5CE20087C984 /* BWOrderedManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWOrderedManagedObject.h; sourceTree = "<group>"; };
+		09644C8C110C5CE20087C984 /* BWOrderedManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWOrderedManagedObject.m; sourceTree = "<group>"; };
+		09644CA5110C6A270087C984 /* CoreData_common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreData_common.h; sourceTree = "<group>"; };
+		09644CA6110C6A270087C984 /* CoreData_common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreData_common.m; sourceTree = "<group>"; };
+		09644CCE110C74410087C984 /* TasklistsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasklistsManager.h; sourceTree = "<group>"; };
+		09644CCF110C74410087C984 /* TasklistsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasklistsManager.m; sourceTree = "<group>"; };
+		09644CD0110C74410087C984 /* TasklistsManager.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasklistsManager.xib; sourceTree = "<group>"; };
 		09F9C8DD10F8D8040011632B /* StrokedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StrokedView.h; sourceTree = "<group>"; };
 		09F9C8DE10F8D8040011632B /* StrokedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StrokedView.m; sourceTree = "<group>"; };
+		09FAE8C9110C78F9002C7B56 /* TasklistCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasklistCell.h; sourceTree = "<group>"; };
+		09FAE8CA110C78F9002C7B56 /* TasklistCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasklistCell.m; sourceTree = "<group>"; };
+		09FAE8CC110C7908002C7B56 /* TasklistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasklistCell.xib; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1D3623240D0F684500981E51 /* TasklistAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TasklistAppDelegate.h; sourceTree = "<group>"; };
-		1D3623250D0F684500981E51 /* TasklistAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TasklistAppDelegate.m; sourceTree = "<group>"; };
+		1D3623240D0F684500981E51 /* TasklistAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TasklistAppDelegate.h; path = Classes/TasklistAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* TasklistAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TasklistAppDelegate.m; path = Classes/TasklistAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* Tasklist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tasklist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -101,10 +128,6 @@
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* Tasklist_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tasklist_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Tasklist-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Tasklist-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
-		E628DC51110B004200AAC6EA /* TaskList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskList.h; sourceTree = "<group>"; };
-		E628DC52110B004200AAC6EA /* TaskList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskList.m; sourceTree = "<group>"; };
-		E628DC53110B004200AAC6EA /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		E628DC54110B004200AAC6EA /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		E62AE7F410ED46790003F8FE /* TasklistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TasklistViewController.xib; sourceTree = "<group>"; };
 		E62AE88A10ED519E0003F8FE /* TaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskCell.h; sourceTree = "<group>"; };
 		E62AE88B10ED519E0003F8FE /* TaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
@@ -238,8 +261,6 @@
 		E660876E10ED2E53005E71B4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		E660877B10ED2EEB005E71B4 /* tasklist.xcdatamodel */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.xcdatamodel; path = tasklist.xcdatamodel; sourceTree = "<group>"; };
 		E66087B910ED312D005E71B4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		E66087C410ED318A005E71B4 /* Task+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+Utils.h"; sourceTree = "<group>"; };
-		E66087C510ED318A005E71B4 /* Task+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+Utils.m"; sourceTree = "<group>"; };
 		E67D922710ED802D00449727 /* Checklist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checklist.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -263,11 +284,36 @@
 			isa = PBXGroup;
 			children = (
 				09F9C8DC10F8D7E10011632B /* common sources */,
+				09FAE95B110C8C43002C7B56 /* custom navigation controller */,
+				09644CCD110C74090087C984 /* tasklists manager */,
 				E62AE88610ED51520003F8FE /* task list */,
-				1D3623240D0F684500981E51 /* TasklistAppDelegate.h */,
-				1D3623250D0F684500981E51 /* TasklistAppDelegate.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		09644C92110C5CED0087C984 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				09644CA5110C6A270087C984 /* CoreData_common.h */,
+				09644CA6110C6A270087C984 /* CoreData_common.m */,
+				09644C8B110C5CE20087C984 /* BWOrderedManagedObject.h */,
+				09644C8C110C5CE20087C984 /* BWOrderedManagedObject.m */,
+				E660878110ED2EF7005E71B4 /* tasklist.xcdatamodeld */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		09644CCD110C74090087C984 /* tasklists manager */ = {
+			isa = PBXGroup;
+			children = (
+				09644CCE110C74410087C984 /* TasklistsManager.h */,
+				09644CCF110C74410087C984 /* TasklistsManager.m */,
+				09644CD0110C74410087C984 /* TasklistsManager.xib */,
+				09FAE8C9110C78F9002C7B56 /* TasklistCell.h */,
+				09FAE8CA110C78F9002C7B56 /* TasklistCell.m */,
+				09FAE8CC110C7908002C7B56 /* TasklistCell.xib */,
+			);
+			name = "tasklists manager";
 			sourceTree = "<group>";
 		};
 		09F9C8DC10F8D7E10011632B /* common sources */ = {
@@ -277,6 +323,16 @@
 				09F9C8DE10F8D8040011632B /* StrokedView.m */,
 			);
 			name = "common sources";
+			sourceTree = "<group>";
+		};
+		09FAE95B110C8C43002C7B56 /* custom navigation controller */ = {
+			isa = PBXGroup;
+			children = (
+				09644B73110B76710087C984 /* CustomNavigationController.h */,
+				09644B74110B76710087C984 /* CustomNavigationController.m */,
+				09644B75110B76710087C984 /* CustomNavigationController.xib */,
+			);
+			name = "custom navigation controller";
 			sourceTree = "<group>";
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -290,6 +346,10 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				1D3623240D0F684500981E51 /* TasklistAppDelegate.h */,
+				1D3623250D0F684500981E51 /* TasklistAppDelegate.m */,
+				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
+				09644C92110C5CED0087C984 /* Core Data */,
 				E660877510ED2E93005E71B4 /* Model */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -297,7 +357,6 @@
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 				E660876E10ED2E53005E71B4 /* SystemConfiguration.framework */,
-				E660878110ED2EF7005E71B4 /* tasklist.xcdatamodeld */,
 				E66087B910ED312D005E71B4 /* CoreData.framework */,
 			);
 			name = CustomTemplate;
@@ -317,7 +376,6 @@
 			isa = PBXGroup;
 			children = (
 				E67D922710ED802D00449727 /* Checklist.png */,
-				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				8D1107310486CEB800E47090 /* Tasklist-Info.plist */,
 			);
 			name = Resources;
@@ -521,12 +579,12 @@
 		E660877510ED2E93005E71B4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E628DC51110B004200AAC6EA /* TaskList.h */,
-				E628DC52110B004200AAC6EA /* TaskList.m */,
-				E628DC53110B004200AAC6EA /* Task.h */,
-				E628DC54110B004200AAC6EA /* Task.m */,
-				E66087C410ED318A005E71B4 /* Task+Utils.h */,
-				E66087C510ED318A005E71B4 /* Task+Utils.m */,
+				09644C66110C5CBC0087C984 /* Task.h */,
+				09644C67110C5CBC0087C984 /* Task.m */,
+				09644C62110C5CBC0087C984 /* TaskList.h */,
+				09644C63110C5CBC0087C984 /* TaskList.m */,
+				09644C64110C5CBC0087C984 /* ListsCollection.h */,
+				09644C65110C5CBC0087C984 /* ListsCollection.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -577,6 +635,9 @@
 				E62AE7F510ED46790003F8FE /* TasklistViewController.xib in Resources */,
 				E62AE88E10ED519E0003F8FE /* TaskCell.xib in Resources */,
 				E67D922810ED802D00449727 /* Checklist.png in Resources */,
+				09644B77110B76710087C984 /* CustomNavigationController.xib in Resources */,
+				09644CD2110C74410087C984 /* TasklistsManager.xib in Resources */,
+				09FAE8CD110C7908002C7B56 /* TasklistCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -650,11 +711,16 @@
 				E660876A10ED2DEE005E71B4 /* WebParams.m in Sources */,
 				E660876B10ED2DEE005E71B4 /* XMLWriter.m in Sources */,
 				E660878210ED2EF7005E71B4 /* tasklist.xcdatamodeld in Sources */,
-				E66087C610ED318A005E71B4 /* Task+Utils.m in Sources */,
 				E62AE88D10ED519E0003F8FE /* TaskCell.m in Sources */,
 				09F9C8DF10F8D8040011632B /* StrokedView.m in Sources */,
-				E628DC55110B004200AAC6EA /* TaskList.m in Sources */,
-				E628DC56110B004200AAC6EA /* Task.m in Sources */,
+				09644B76110B76710087C984 /* CustomNavigationController.m in Sources */,
+				09644C68110C5CBC0087C984 /* TaskList.m in Sources */,
+				09644C69110C5CBC0087C984 /* ListsCollection.m in Sources */,
+				09644C6A110C5CBC0087C984 /* Task.m in Sources */,
+				09644C8D110C5CE20087C984 /* BWOrderedManagedObject.m in Sources */,
+				09644CA7110C6A270087C984 /* CoreData_common.m in Sources */,
+				09644CD1110C74410087C984 /* TasklistsManager.m in Sources */,
+				09FAE8CB110C78F9002C7B56 /* TasklistCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,25 +1,23 @@
-//
-//  Task.h
-//  Tasklist
-//
-//  Created by loki on 23.01.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
 #import <CoreData/CoreData.h>
+#import "BWOrderedManagedObject.h"
 
-@class TaskList;
-
-@interface Task :  NSManagedObject  
+@interface Task :  BWOrderedManagedObject  
 {
 }
 
-@property (nonatomic, retain) NSNumber * isCompleted;
 @property (nonatomic, retain) NSString * text;
-@property (nonatomic, retain) NSNumber * index;
-@property (nonatomic, retain) TaskList * list;
 
 @end
 
+@interface Task (CoreDataGeneratedAccessors)
+@property (nonatomic) BOOL isCompleted;
+@end
 
+
+@interface Task (Utils) 
+
++(id) taskWithText: (NSString*)text;
+-(void)delete;
+
+@end
 

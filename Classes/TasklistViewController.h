@@ -1,11 +1,11 @@
-#import <UIKit/UIKit.h>
-
 @class StrokedView;
+@class TaskList;
 
 @interface TasklistViewController : UITableViewController<UITextFieldDelegate> {
-	NSMutableArray* tasks;
+	TaskList* tasklist;
 	IBOutlet StrokedView* strokedView;
 }
+@property(retain) TaskList* tasklist;
 
 @end
 

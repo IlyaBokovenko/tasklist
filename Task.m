@@ -1,20 +1,59 @@
-// 
-//  Task.m
-//  Tasklist
-//
-//  Created by loki on 23.01.10.
-//  Copyright 2010 __MyCompanyName__. All rights reserved.
-//
-
 #import "Task.h"
-
-#import "TaskList.h"
+#import "TasklistAppDelegate.h"
 
 @implementation Task 
 
-@dynamic isCompleted;
 @dynamic text;
-@dynamic index;
-@dynamic list;
 
 @end
+
+@implementation Task(Utils)
+
++(id) taskWithText: (NSString*)text{
+	Task* inst = [NSEntityDescription insertNewObjectForEntityForName:@"Task" 
+											   inManagedObjectContext: managedObjectContext()];
+
+	inst.text = text;
+	return inst;
+}
+
+-(void)delete{
+	[managedObjectContext() deleteObject: self];
+}
+
+@end
+
+
+
+@interface Task (CoreDataGeneratedPrimitiveAccessors)
+
+- (NSNumber *)primitiveIsCompleted;
+- (void)setPrimitiveIsCompleted:(NSNumber *)value;
+
+@end
+
+@implementation Task (CoreDataGeneratedAccessors)
+@dynamic isCompleted;
+
+- (BOOL)isCompleted 
+{
+    NSNumber * tmpValue;
+    
+    [self willAccessValueForKey:@"isCompleted"];
+    tmpValue = [self primitiveIsCompleted];
+    [self didAccessValueForKey:@"isCompleted"];
+    
+    return [tmpValue boolValue];
+}
+
+- (void)setIsCompleted:(BOOL)value 
+{
+    [self willChangeValueForKey:@"isCompleted"];
+    [self setPrimitiveIsCompleted:[NSNumber numberWithBool: value]];
+    [self didChangeValueForKey:@"isCompleted"];
+}
+
+
+@end
+
+

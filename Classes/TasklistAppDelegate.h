@@ -2,11 +2,13 @@
 
 NSManagedObjectContext* managedObjectContext();
 
+@class CustomNavigationController;
+@class TasklistsManager;
 
 @interface TasklistAppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
-
-	IBOutlet UINavigationController* topController;
+	IBOutlet CustomNavigationController* topController;
+	IBOutlet TasklistsManager* manager;
 	
 	NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;	    

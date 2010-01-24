@@ -1,17 +1,17 @@
-#import "TaskCell.h"
-#import "Task.h"
+#import "TasklistCell.h"
+#import "TaskList.h"
 #import "NSArray+Utils.h"
 
-@implementation TaskCell
-@synthesize task;
+@implementation TasklistCell
+@synthesize tasklist;
 
 #pragma mark private
 
 -(void)awakeFromNib{
 	[super awakeFromNib];
 	
-	normalFont = [taskTextLabel.font retain];
-	NSArray* familyFonts = [UIFont fontNamesForFamilyName: taskTextLabel.font.familyName];
+	normalFont = [tasklistTextLabel.font retain];
+	NSArray* familyFonts = [UIFont fontNamesForFamilyName: tasklistTextLabel.font.familyName];
 	NSString* obliqueFontName = [familyFonts detect: [NSPredicate predicateWithFormat:@"self endswith '-Oblique'"]];
 	if(!obliqueFontName)obliqueFontName = normalFont.fontName;
 	completedFont = [[UIFont fontWithName: obliqueFontName size:normalFont.pointSize] retain];	
@@ -24,7 +24,7 @@
 
 -(void)showEditField{
 	editField.hidden = NO;
-	editField.text = task.text;
+	editField.text = tasklist.name;
 	[editField becomeFirstResponder];	
 	NSNotificationCenter *notifications = [NSNotificationCenter defaultCenter];
 	[notifications addObserver:self selector:@selector(kbdWillHide:) name:UIKeyboardWillHideNotification object:nil];
@@ -36,38 +36,38 @@
 }
 
 - (void) showCompleted {
-	if(task.isCompleted){		
-		taskTextLabel.font = completedFont;
-		taskTextLabel.textColor = [UIColor grayColor];
+	if(tasklist.isCompleted){		
+		tasklistTextLabel.font = completedFont;
+		tasklistTextLabel.textColor = [UIColor grayColor];
 	}else {
-		taskTextLabel.font = normalFont;
-		taskTextLabel.textColor = [UIColor blackColor];
+		tasklistTextLabel.font = normalFont;
+		tasklistTextLabel.textColor = [UIColor blackColor];
 	}
 }
 
--(void)showTask{
-	taskTextLabel.text = task.text;
+-(void)showTasklist{
+	tasklistTextLabel.text = tasklist.name;
 	[self showCompleted];
 }
 
 -(void)updateText{
-	task.text = editField.text;
+	tasklist.name = editField.text;
 	[self hideEditField];
-	[self showTask];	
+	[self showTasklist];	
 }
 
 #pragma mark properties
-- (void) setTask:(Task*)_task{
-	[_task retain];
-	[task release];
-	task = _task;
-	[self showTask];
+- (void) setTasklist:(TaskList*)_tasklist{
+	[_tasklist retain];
+	[tasklist release];
+	tasklist = _tasklist;
+	[self showTasklist];
 }
 
 #pragma mark public
 
 -(void)toggle{
-	task.isCompleted = !task.isCompleted;
+	tasklist.isCompleted =  !tasklist.isCompleted;
 	[self showCompleted];
 }
 
@@ -90,8 +90,8 @@
 	
 	[[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardWillHideNotification object:nil];
 	[editField release];
-	[taskTextLabel release];
-	[task release];
+	[tasklistTextLabel release];
+	[tasklist release];
 	[super dealloc];
 }
 

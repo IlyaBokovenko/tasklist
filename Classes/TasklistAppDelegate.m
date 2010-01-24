@@ -1,5 +1,8 @@
 #import "TasklistAppDelegate.h"
-#import "TasklistViewController.h"
+#import "CustomNavigationController.h"
+#import "TasklistsManager.h"
+
+#import "NSError+Utils.h"
 
 @implementation TasklistAppDelegate
 
@@ -9,10 +12,9 @@ NSManagedObjectContext* managedObjectContext(){
 	return ((TasklistAppDelegate*)[[UIApplication sharedApplication] delegate]).managedObjectContext;
 }
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
-    
-    // Override point for customization after app launch    
-    [window addSubview:topController.view];
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+	topController.controllers = [NSArray arrayWithObject: manager];
+	[window addSubview:topController.view];
     [window makeKeyAndVisible];
 }
 
@@ -23,7 +25,8 @@ NSManagedObjectContext* managedObjectContext(){
 
 
 - (void)dealloc {
-    [topController release];
+	[manager release];
+	[topController release];
     [window release];
     [super dealloc];
 }
@@ -48,10 +51,12 @@ NSManagedObjectContext* managedObjectContext(){
         return persistentStoreCoordinator;
     }
 	
-    NSURL *storeUrl = [NSURL fileURLWithPath: [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"DB.sqlite"]];
+	NSString* path = [[self applicationDocumentsDirectory] stringByAppendingPathComponent: @"DB.sqlite"];
+    NSURL *storeUrl = [NSURL fileURLWithPath: path];
 	
-	NSError* er = nil;
-	[[NSFileManager defaultManager] removeItemAtPath: [storeUrl absoluteString] error:&er];
+//	NSError* er = nil;
+//	[[NSFileManager defaultManager] removeItemAtPath: path error:&er];
+//	if(er) [er display];
 	
 	NSError *error = nil;
 	NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:
